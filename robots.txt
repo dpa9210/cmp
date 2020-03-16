@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /.htaccess
+Disallow: /manage/
+Disallow: /dist/
+Disallow: /log/
+Disallow: /my-account/
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /admin-ajax.php

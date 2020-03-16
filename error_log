@@ -1,0 +1,6 @@
+[24-Aug-2016 21:40:44 Africa/Lagos] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'cmpuser'@'localhost' (using password: YES) in /home/cmpcomng/public_html/dist/core/conx.php on line 7
+[24-Aug-2016 22:04:35 Africa/Lagos] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'cmpuser'@'localhost' (using password: YES) in /home/cmpcomng/public_html/dist/core/conx.php on line 7
+[24-Aug-2016 22:47:57 Africa/Lagos] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'cmpuser'@'localhost' (using password: YES) in /home/cmpcomng/public_html/dist/core/conx.php on line 7
+[24-Aug-2016 22:52:00 Africa/Lagos] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'cmpuser'@'localhost' (using password: YES) in /home/cmpcomng/public_html/dist/core/conx.php on line 7
+[24-Aug-2016 22:52:52 Africa/Lagos] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'cmpuser'@'localhost' (using password: YES) in /home/cmpcomng/public_html/dist/core/conx.php on line 7
+[24-Aug-2016 22:53:05 Africa/Lagos] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'cmpuser'@'localhost' (using password: YES) in /home/cmpcomng/public_html/dist/core/conx.php on line 7

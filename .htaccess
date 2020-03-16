@@ -1,0 +1,71 @@
+RewriteEngine On
+RewriteBase /cmp
+RewriteRule ^(css|js|images)/(.*)?$ /$1/$2 [L,QSA,R=301]
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule .* - [L]
+RewriteRule ^ad/([0-9]+)/([a-zA-Z-0-9]+)$ ad.php?id=$1&title=$2 [NC,L]
+RewriteRule ^post/([0-9]+)/([a-zA-Z-0-9]+)$ post.php?id=$1&title=$2 [NC,L]
+RewriteRule ^index$ index.php
+RewriteRule ^about-us$ about.php
+RewriteRule ^ad-by-state$ ad-by-state.php
+RewriteRule ^contact-us$ contact.php
+RewriteRule ^how-it-works$ how-it-works.php
+RewriteRule ^privacy$ privacy.php
+RewriteRule ^scam$ scam.php
+RewriteRule ^blog$ blog.php
+RewriteRule ^terms-of-use$ terms-of-use.php
+RewriteRule ^my-account/index$ my-account/index.php
+RewriteRule ^my-account/new-ad$ my-account/new-ad.php
+RewriteRule ^my-account/account$ my-account/account.php
+RewriteRule ^my-account/register my-account/register.php
+RewriteRule ^my-account/recover-account my-account/recover-account.php
+RewriteRule ^my-account/logout my-account/logout.php
+
+
+RewriteCond %{HTTP_REFERER} ^http(s)?://(www\.)?cmp.com.ng*$ [NC]
+RewriteRule .* google.com [L]
+
+
+# Custom error pages.
+ErrorDocument 404 error.php
+
+# Prevent viewing of htaccess file.
+<Files .htaccess>
+    order allow,deny
+    deny from all
+</Files>
+<files ~ conx.php>
+    order allow,deny
+    deny from all
+</files>
+# Prevent directory listings
+Options All -Indexes
+
+#Removes all extension from files
+#Options +MultiViews
+
+#Net vampires
+RewriteCond %{HTTP_USER_AGENT} ^BackWeb [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^Bandit [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^BatchFTP [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^BecomeBot [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^BlackWidow [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^Net\ Vampire [NC]
+RewriteRule . abuse.txt [L]
+#suckers and kiddies
+# why not come visit me directly?
+RewriteCond %{HTTP_REFERER} \.opendirviewer\. [NC,OR]
+# this prevents stoopid cross-site discovery attacks..
+RewriteCond %{THE_REQUEST} \?\ HTTP/ [NC,OR]
+# please stop pretending to be the Googlebot..
+RewriteCond %{HTTP_REFERER} users\.skynet\.be.* [NC,OR]
+# really, we need a special page for these twats..
+RewriteCond %{QUERY_STRING} \=\|w\| [NC,OR]
+RewriteCond %{THE_REQUEST} etc/passwd [NC,OR]
+RewriteCond %{REQUEST_URI} owssvr\.dll [NC,OR]
+# you can probably work these out..
+RewriteCond %{QUERY_STRING} \=\|w\| [NC,OR]
+RewriteCond %{THE_REQUEST} \/\*\ HTTP/ [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} Sucker [NC]
+RewriteRule . abuse.txt [L]
