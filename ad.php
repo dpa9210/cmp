@@ -77,15 +77,6 @@ $link->close();
 
 <script type="text/javascript">
   $('#phnumber').hide();
-</script>
-<hr>
-Share this ad<br>
-<!-- Go to www.addthis.com/dashboard to customize your tools -->
-<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5690095a5ae9ef46"></script>
-<!-- Go to www.addthis.com/dashboard to customize your tools -->
-<div class="addthis_inline_share_toolbox_t8m2"></div>
-
-
 
 </div>
 
@@ -105,14 +96,6 @@ Share this ad<br>
 
 <?php include 'dist/footer.php'; ?>
 </div>
-<!--
-<script type="text/javascript">var switchTo5x=true;</script>
-<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
-<script type="text/javascript">stLight.options({publisher: "5b572bab-7e03-4eb1-b558-8f134f4c1db4", doNotHash: false, doNotCopy: false, hashAddressBar: true});</script>
--->
-
-
-
 </body>
 </html>
 
