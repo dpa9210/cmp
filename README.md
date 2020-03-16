@@ -1,4 +1,5 @@
 # cmp
 Business Listing project built with php and mysql
-Modify as required.
+Modify as required
+DB file included
 
